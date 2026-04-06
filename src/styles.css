@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("./assets/images/viking-hall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+}
+
+/*O z-index: 1 garante que o header e sua sombra sempre
+  fiquem acima do restante do conteúdo.*/
+.header {
+  grid-column: 1 / -1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  z-index: 1;
+  color: white;
+}
+
+.logo-headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgb(90, 44, 2, 1);
+  border: 5px solid rgb(143, 81, 64, 0.5);
+  border-radius: 2rem;
+  padding: clamp(1rem, 2vw, 1rem);
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+nav button {
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: rgb(90, 44, 20, 0.9);
+  border: 2px solid rgb(143, 81, 64, 0.5);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgba(116, 57, 26, 0.9);
+}
+
+button:active {
+  cursor: pointer;
+  background-color: rgb(90, 44, 20, 0.9);
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+}
