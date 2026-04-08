@@ -33,3 +33,14 @@ Refrigerantes R$ 8,00:
 "Com ou sem gás."
 */
 
+/* function createMenuPage() {
+    main.textContent = '';
+    main.classList.remove('contact');
+    main.classList.add('menu');
+
+    //TODO - criar o menu e fazer o append
+    // O orquestrador vai criar os elementos e adicionar o conteúdo enviado pelo módulo
+} */
+
+//export { menuPage };
+
