@@ -1,6 +1,6 @@
 import "./styles.css";
 import { homePage } from "./home-page/home-page.js";
-//import { menuPage } from "./menu-page/menu-page.js";
+import { menuPage } from "./menu-page/menu-page.js";
 
 const header = document.querySelector('.header');
 
@@ -17,10 +17,10 @@ homeButton.addEventListener('click', () => {
     main.append(home);
 });
 
-/* menuButton.addEventListener('click', () => {
+menuButton.addEventListener('click', () => {
     main.textContent = '';
     const menuPage = menuPage.createMenuPage();
     main.append(menuPage);
-}); */
+});
 
 
