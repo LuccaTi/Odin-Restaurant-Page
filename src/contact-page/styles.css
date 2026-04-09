@@ -22,3 +22,32 @@
   overflow-wrap: anywhere;
   line-height: 1.5;
 }
+
+.contact-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgb(90, 44, 2, 1);
+  border: 5px solid rgb(143, 81, 64, 0.5);
+  border-radius: 2rem;
+  padding: clamp(1rem, 2vw, 1rem);
+  width: min(52vw, 320px);
+}
+
+#title-div {
+  width: auto;
+  padding: clamp(2rem, 3vw, 2rem);
+}
+
+#github-icon {
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+
+#linkedin-icon {
+  height: 2rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}

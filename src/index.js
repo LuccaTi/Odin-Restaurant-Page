@@ -1,8 +1,7 @@
 import "./styles.css";
 import { homePage } from "./home-page/home-page.js";
 import { menuPage } from "./menu-page/menu-page.js";
-
-const header = document.querySelector('.header');
+import { contactPage } from "./contact-page/contact-page.js";
 
 const homeButton = document.getElementById('home-button');
 const menuButton = document.getElementById('menu-button');
@@ -21,6 +20,12 @@ const menu = menuPage.createMenuPage();
 menuButton.addEventListener('click', () => {
     main.replaceChildren();
     main.append(menu);
+});
+
+const contact = contactPage.createContactPage();
+contactButton.addEventListener('click', () => {
+    main.replaceChildren();
+    main.append(contact);
 });
 
 
