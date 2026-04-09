@@ -1,6 +1,6 @@
 import "./styles.css";
-import { paragraphs } from "./home-page/home-page.js";
-
+import { homePage } from "./home-page/home-page.js";
+import { menuPage } from "./menu-page/menu-page.js";
 
 const header = document.querySelector('.header');
 
@@ -10,22 +10,17 @@ const contactButton = document.getElementById('contact-button');
 
 const main = document.getElementById('main-content');
 
-createHomePage();
-homeButton.addEventListener('click', createHomePage);
+const home = homePage.createHomePage();
+main.append(home);
+homeButton.addEventListener('click', () => {
+    main.replaceChildren();
+    main.append(home);
+});
+
+const menu = menuPage.createMenuPage();
+menuButton.addEventListener('click', () => {
+    main.replaceChildren();
+    main.append(menu);
+});
 
 
-function createHomePage() {
-    main.textContent = '';
-    main.classList.add('content');
-
-    const firstParagraph = document.createElement('p');
-    firstParagraph.textContent = paragraphs.firstParagraph;
-
-    const secondParagraph = document.createElement('p');
-    secondParagraph.textContent = paragraphs.secondParagraph;
-
-    const thirdParagraph = document.createElement('p');
-    thirdParagraph.textContent = paragraphs.thirdParagraph;
-
-    main.append(firstParagraph, secondParagraph, thirdParagraph);
-}
