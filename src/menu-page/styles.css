@@ -1,4 +1,4 @@
-.content {
+.content.menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,9 +13,10 @@
   height: fit-content;
   margin: 0 auto;
   border-radius: 2rem;
+  margin-bottom: 1rem;
 }
 
-.content p {
+.content.menu p {
   text-align: left;
   /*Largura máxima da linha e plano B para forçar a quebra da linha.*/
   max-width: 65ch;
@@ -23,7 +24,7 @@
   line-height: 1.5;
 }
 
-.menu-item {
+.menu-div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,4 +33,70 @@
   border: 5px solid rgb(143, 81, 64, 0.5);
   border-radius: 2rem;
   padding: clamp(1rem, 2vw, 1rem);
+  width: min(52vw, 320px);
+}
+
+.menu-div.food-title {
+  margin-top: 5rem;
+}
+
+.menu-div.menu-item {
+  flex-direction: column;
+  width: min(52vw, 520px);
+}
+
+.menu-div.menu-item h3 {
+  font-weight: normal;
+}
+
+.menu-div.menu-item img {
+  height: 15rem;
+  width: 15rem;
+  justify-self: flex-end;
+}
+
+figure {
+  margin: 0;
+  display: inline-block; /* Mantém a legenda na largura da imagem */
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #5b5b5b;
+  margin-top: 5px;
+  font-family: sans-serif;
+}
+
+a {
+  color: #5b5b5b;
+}
+
+a:visited {
+  color: #5b5b5b;
+}
+
+.menu-div.menu-item p {
+  text-align: left;
+  /*Largura máxima da linha e plano B para forçar a quebra da linha.*/
+  max-width: 65ch;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.title-price {
+  width: min(30vw, 220px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.description-image {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(52vw, 420px);
+}
+
+#menu-title-div {
+  width: min(72vw, 520px);
 }

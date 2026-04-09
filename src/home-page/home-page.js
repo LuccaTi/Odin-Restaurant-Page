@@ -5,7 +5,7 @@ const homePage = {
     createHomePage() {
 
         const homeDiv = document.createElement('div');
-        homeDiv.classList.add('content');
+        homeDiv.classList.add('content', 'home');
 
         let firstParagraph = "Em Asgard existem guerreiros muito poderosos que são responsáveis por cuidar da paz entre os nove reinos da mitologia nórdica, todos são gerenciados e comandados pelo 'All Father' Odin.";
 

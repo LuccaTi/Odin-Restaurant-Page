@@ -1,4 +1,4 @@
-.content {
+.content.home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@
   border-radius: 2rem;
 }
 
-.content p {
+.content.home p {
   text-align: left;
   /*Largura máxima da linha e plano B para forçar a quebra da linha.*/
   max-width: 65ch;

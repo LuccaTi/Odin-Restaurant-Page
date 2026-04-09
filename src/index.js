@@ -13,14 +13,14 @@ const main = document.getElementById('main-content');
 const home = homePage.createHomePage();
 main.append(home);
 homeButton.addEventListener('click', () => {
-    main.textContent = '';
+    main.replaceChildren();
     main.append(home);
 });
 
+const menu = menuPage.createMenuPage();
 menuButton.addEventListener('click', () => {
-    main.textContent = '';
-    const menuPage = menuPage.createMenuPage();
-    main.append(menuPage);
+    main.replaceChildren();
+    main.append(menu);
 });
 
 
