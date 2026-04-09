@@ -67,11 +67,11 @@ figcaption {
   font-family: sans-serif;
 }
 
-a {
+.image-credits-link {
   color: #5b5b5b;
 }
 
-a:visited {
+.image-credits-link:visited {
   color: #5b5b5b;
 }
 

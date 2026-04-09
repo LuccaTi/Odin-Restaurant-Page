@@ -172,6 +172,7 @@ const menuPage = {
             link.href = imageCredits;
             link.target = '_blank';
             link.textContent = imageAuthor;
+            link.classList.add('image-credits-link')
             caption.append(`${itemName} by `, link);
             figure.append(image, caption);
 
