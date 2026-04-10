@@ -26,12 +26,13 @@ A proposta foi construir um restaurante ficticio (Odin Recipes) com foco em:
 - Webpack 5
 - webpack-cli
 - webpack-dev-server
+- webpack-merge
 - html-webpack-plugin
 - html-loader
 - css-loader
 - style-loader
-- Asset Modules (imagens e ícones)
-- HTML5 semântico
+- Asset Modules (imagens e icones)
+- HTML5 semantico
 - CSS Grid + Flexbox
 
 ## Estrutura do Projeto
@@ -57,39 +58,51 @@ restaurant-page/
 │     ├─ contact-page.js
 │     ├─ styles.css
 │     └─ assets/icons/
-├─ webpack.config.js
+├─ webpack.common.js
+├─ webpack.dev.js
+├─ webpack.prod.js
 ├─ package.json
 └─ README.md
 ```
 
+## Build Setup
+
+O projeto usa configuração separada do Webpack por ambiente:
+
+- `webpack.common.js`: entrada, output, plugins e loaders compartilhados.
+- `webpack.dev.js`: configuração de desenvolvimento com dev server e source map rapido.
+- `webpack.prod.js`: configuração de produção com source map apropriado para build final.
+
+Essa divisão é feita com `webpack-merge` para manter o setup mais limpo e escalável.
+
 ## Como Executar
 
-### Pre-requisitos
+### Pré-requisitos
 
 - Node.js 18+
 - npm
 
 ### Passo a passo
 
-1. Instale as dependencias:
+1. Instale as dependências:
 
 ```bash
 npm install
 ```
 
-2. Gere o bundle de desenvolvimento:
+2. Rode o projeto em desenvolvimento:
 
 ```bash
-npx webpack
+npm start
 ```
 
-3. Execute o servidor local:
+3. Gere o build de produção:
 
 ```bash
-npx webpack serve
+npm run build
 ```
 
-4. Acesse no navegador:
+4. Em desenvolvimento, acesse no navegador:
 
 ```text
 http://localhost:8080
@@ -97,9 +110,8 @@ http://localhost:8080
 
 ## Observações
 
-- O projeto está configurado em `mode: development`.
-- O bundle de saída é gerado em `dist/` com limpeza automática (`output.clean`).
-- O README documenta o estado final funcional do projeto.
+- O bundle de saida é gerado em `dist/` com limpeza automática (`output.clean`).
+- O README documenta o estado atual do projeto apos a migração para `webpack-merge`.
 
 
 
