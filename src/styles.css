@@ -43,6 +43,7 @@ html {
   gap: 1rem;
   z-index: 1;
   color: white;
+  margin-top: 2rem;
 }
 
 .logo-headline {
@@ -102,5 +103,18 @@ button:active {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
+  }
+
+  .header {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 1rem;
+    z-index: 1;
+    color: white;
+    margin-top: 0;
   }
 }

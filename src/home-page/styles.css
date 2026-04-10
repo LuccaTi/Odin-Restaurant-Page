@@ -13,6 +13,7 @@
   height: fit-content;
   margin: 0 auto;
   border-radius: 2rem;
+  margin-bottom: 2rem;
 }
 
 .content.home p {
@@ -21,4 +22,24 @@
   max-width: 65ch;
   overflow-wrap: anywhere;
   line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .content.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    color: white;
+    text-align: center;
+    padding: clamp(1rem, 2vw, 2rem);
+    background-color: rgb(90, 44, 2, 0.7);
+    border: 5px solid rgb(143, 81, 64, 0.5);
+    width: min(92vw, 720px);
+    height: fit-content;
+    margin: 0 auto;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
 }
